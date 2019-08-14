@@ -1,0 +1,22 @@
+*PlugPreserve.txt*	Help File
+
+			VIM - PlugPreserve
+------------------------------------------------------------------------------
+INTRODUCTION
+
+    This plugin uses git stash before PlugUpdate starts update. After all
+    updates, all changes are restored with "git stash pop".
+
+------------------------------------------------------------------------------
+COMMANDS
+
+							 *PlugUpdatePreserve*
+:PlugUpdatePreserve	Execute *PlugUpdate* preserving own changes.
+
+------------------------------------------------------------------------------
+AUTHOR
+
+Guilherme Alberto Wachs Lopes
+
+
+ vim:tw=78:isk=!-~,^*,^\|,^\":ts=8:noet:ft=help:norl:
