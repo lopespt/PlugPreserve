@@ -15,12 +15,13 @@ function! AfterUpdate()
   au! PlugUpdatePreserve TextChanged 
   echo "Unstashing"
   let plug=g:plug_home
-  let stashCmd="cd " . plug . "; for x in $(ls " . plug . ");do cd $x; git stash pop; echo "."; cd .. ;done;"
+  let stashCmd="cd " . plug . "; for x in $(ls " . plug . ");do cd $x; git stash pop; "."; cd .. ;done;"
   let result=systemlist(stashCmd)
   new
   set hidden
   set nobuflisted
   set buftype=nofile
+  set bufhidden=wipe
   call append(0,result)
   echo "Unstashed"
 endfunction
